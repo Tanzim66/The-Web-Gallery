@@ -1,0 +1,214 @@
+.post-image-form-container{
+    display: block;
+    padding: 20px 30px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    animation: moveIn 2s;
+    transition: all 2s ease-in;
+}
+
+.post-image-form-container .post-image-form-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-image-form-header .post-image-form-heading{
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.post-image-form{
+    margin-top: 20px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.form__elements{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.form__element{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.upload-image-container{
+    width: 100%;
+    flex-direction: row;
+    box-shadow: rgb(0 0 0 / 6%) 0px 2px 4px 0px inset;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    color: #808080;
+    font-size: 13px;
+}
+
+.upload-file-container{
+    position: relative;
+    padding: 10px 10px;
+    background-color: rgba(128, 128, 128, 0.7);
+    color: white;
+}
+
+#post-image-file{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.file-selected-container{
+    padding: 10px 10px;
+}
+
+.form__input{
+    padding: 10px 10px;
+    margin-top: 5px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.post-image-form__input:focus{
+    outline: none;
+}
+
+
+/*Code from https://www.w3schools.com/howto/howto_css_switch.asp*/
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 28px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #2196F3;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(30px);
+    -ms-transform: translateX(30px);
+    transform: translateX(30px);
+}
+  
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.btn{
+    text-decoration:none;
+    background-color: #2196F3;
+    border: none;
+    height: 35px;
+    border-radius: 10px;
+    color: white;
+    width: 100%;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+.comment-form{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.comment-form-element{
+    padding: 10px 10px;
+    margin-bottom: 5px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    resize: none;
+}
+
+.comment-form-element:focus{
+    outline: none;
+}
+
+@keyframes moveIn {
+    0% {transform: translateY(-100px);}
+    70% {transform: translateY(10px);}
+    100% {transform: translateY(0px);}
+  }
+
+.auth-form{
+    max-width: 800px;
+    padding: 35px 50px;
+    margin: 0 auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.auth-form__header{
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.btn--signup{
+    width: 49%;
+}
+
+.auth-form__btns-container{
+    display: flex;
+    justify-content: space-between;
+}
